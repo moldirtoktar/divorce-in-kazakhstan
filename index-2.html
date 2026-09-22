@@ -1,0 +1,470 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Divorced women in Kazakhstan: Moldir Toktar, Presentation #1</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..800;1,6..96,400..700&family=Hanken+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --black:#000;
+    --white:#fff;
+    --red:#7a0c16;
+    --red-deep:#4a060d;
+    --red-lit:#ea5a64;
+    --ash:#c9c3c3;
+    --ink:#000;
+    --tint:#f7eeee;
+    --serif:'Bodoni Moda','Bodoni 72',Didot,Georgia,serif;
+    --sans:'Hanken Grotesk',system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;
+    --pad-x:clamp(1.25rem,6vw,6rem);
+  }
+  *,*::before,*::after{box-sizing:border-box}
+  html{scroll-behavior:auto;scroll-snap-type:y proximity;background:var(--white)}
+  body{margin:0;font-family:var(--sans);font-size:clamp(1.05rem,1.45vw,1.25rem);line-height:1.55;color:var(--ink);background:var(--white);-webkit-font-smoothing:antialiased}
+  p{margin:0 0 1em;max-width:62ch}
+  strong{font-weight:700}
+  a{color:inherit}
+  :focus-visible{outline:3px solid var(--red-lit);outline-offset:3px}
+
+  /* ---------- slide frame ---------- */
+  .slide{
+    min-height:100vh;min-height:100svh;
+    display:flex;flex-direction:column;justify-content:center;
+    padding:clamp(3rem,8vh,6rem) var(--pad-x) clamp(5rem,11vh,7rem);
+    position:relative;scroll-snap-align:start;overflow:hidden;
+  }
+  .inner{width:min(100%,72rem);margin-inline:auto;position:relative}
+  .on-black{background:var(--black);color:var(--white);--soft:var(--ash);--accent:var(--red-lit);--rule:rgba(255,255,255,.22)}
+  .on-red{background:var(--red);color:var(--white);--soft:rgba(255,255,255,.84);--accent:var(--white);--rule:rgba(255,255,255,.35)}
+  .on-white{background:var(--white);color:var(--ink);--soft:#3f3535;--accent:var(--red);--rule:rgba(0,0,0,.22)}
+  .on-tint{background:var(--tint);color:var(--ink);--soft:#3f3535;--accent:var(--red);--rule:rgba(0,0,0,.22)}
+
+  .tab{
+    font-size:.95rem;font-weight:500;color:var(--soft);
+    margin:0 0 clamp(1.25rem,4vh,2.5rem);
+    padding-left:.75rem;border-left:3px solid var(--accent);max-width:none;
+  }
+
+  /* ---------- type ---------- */
+  .display,h2,h3,.pull{font-family:var(--serif)}
+  .display{font-weight:500;font-size:clamp(2.5rem,7vw,5.8rem);line-height:1.03;letter-spacing:-.012em;margin:0 0 .5em;max-width:16ch}
+  h2{font-weight:500;font-size:clamp(1.9rem,4.4vw,3.5rem);line-height:1.1;letter-spacing:-.008em;margin:0 0 .6em;max-width:22ch}
+  h3{font-weight:600;font-size:clamp(1.25rem,2.1vw,1.7rem);line-height:1.2;margin:0 0 .5em;color:var(--accent)}
+  .lede{font-size:clamp(1.15rem,1.9vw,1.6rem);line-height:1.4;color:var(--soft);max-width:44ch}
+  .small{font-size:.95rem;color:var(--soft)}
+  .cite{font-size:1rem;color:var(--soft);margin-top:1.5rem;max-width:60ch}
+
+  /* rule-separated lists */
+  ul.rows{list-style:none;margin:0;padding:0;max-width:60rem}
+  ul.rows li{padding:.9rem 0;border-top:1px solid var(--rule)}
+  ul.rows li:last-child{border-bottom:1px solid var(--rule)}
+  ul.rows b{font-weight:700}
+
+  /* ---------- 1 title ---------- */
+  #s1{padding-right:calc(clamp(1rem,14vw,14rem) + 2rem)}
+  #s1::after{content:"";position:absolute;inset:0 0 0 auto;width:clamp(1rem,14vw,14rem);background:var(--red)}
+  #s1 .display{color:var(--black)}
+  .byline{font-size:1.2rem;margin-top:2.25rem}
+  .hint{font-size:.9rem;color:var(--soft);margin-top:2.5rem}
+  .title-mark{position:absolute;top:50%;right:clamp(.4rem,3.2vw,2.6rem);transform:translateY(-50%);width:clamp(2.8rem,6.5vw,5.5rem);height:auto;z-index:1}
+
+  /* ---------- 2 numbers ---------- */
+  .ratio{margin:2rem 0 1.25rem;max-width:60rem}
+  .ratio-bar{position:relative;height:clamp(3.25rem,9vw,5.5rem);background:var(--white);border:2px solid var(--black)}
+  .ratio-div{position:absolute;inset:0 auto 0 0;width:32.8%;background:var(--red)}
+  .js .ratio-div{transform:scaleX(0);transform-origin:left;transition:transform 1.4s cubic-bezier(.2,.7,.2,1) .2s}
+  .js .slide.in .ratio-div{transform:scaleX(1)}
+  .ratio-key{display:flex;flex-wrap:wrap;gap:.5rem 2rem;margin-top:.9rem;font-size:1rem;color:var(--soft)}
+  .ratio-key span{display:inline-flex;align-items:center;gap:.5rem}
+  .ratio-key i{display:inline-block;width:1rem;height:1rem;background:var(--white);border:2px solid var(--black)}
+  .ratio-key i.r{background:var(--red);border-color:var(--red)}
+
+  /* ---------- 3 question ---------- */
+  .rq{font-family:var(--serif);font-weight:500;font-size:clamp(1.8rem,4vw,3.3rem);line-height:1.14;max-width:26ch;margin:0 0 2rem}
+  dl.scope{display:grid;grid-template-columns:repeat(auto-fit,minmax(13rem,1fr));gap:1.25rem 2rem;margin:0 0 1.5rem;max-width:56rem}
+  dl.scope div{border-top:1px solid var(--rule);padding-top:.75rem}
+  dl.scope dt{font-weight:700;margin:0 0 .2rem}
+  dl.scope dd{margin:0;color:var(--soft)}
+
+  /* ---------- 6 literature ---------- */
+  .cols{display:grid;grid-template-columns:repeat(auto-fit,minmax(16rem,1fr));gap:2rem 2.5rem;margin:1rem 0 2rem}
+  .cols article{border-top:3px solid var(--red);padding-top:1rem}
+  .cols p{font-size:1rem;margin-bottom:.8em}
+  .gap{border-left:4px solid var(--red);padding:.25rem 0 .25rem 1.25rem;max-width:56rem}
+  .gap p{margin:0}
+
+  /* ---------- 7, 8 quotes ---------- */
+  .pull{margin:0;font-style:italic;font-weight:400;font-size:clamp(1.7rem,3.7vw,3.1rem);line-height:1.2;max-width:30em}
+  .pull.long{font-size:clamp(1.4rem,2.9vw,2.4rem);line-height:1.24;max-width:34em}
+  .reading{margin-top:2.25rem;max-width:56ch}
+  #s8 .inner{border-left:4px solid var(--red);padding-left:clamp(1rem,3vw,2.25rem)}
+  .reading b{font-weight:700}
+
+  /* ---------- 9 framework ---------- */
+  .frame{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:2rem clamp(1.5rem,5vw,4.5rem);align-items:start}
+  .frame .anchor{background:var(--red);color:var(--white);padding:clamp(1.25rem,3vw,2.25rem)}
+  .frame .anchor p{font-family:var(--serif);font-size:clamp(1.4rem,2.5vw,2rem);line-height:1.2;margin:0}
+  .frame .anchor .small{color:rgba(255,255,255,.84);font-family:var(--sans);font-size:.95rem;margin-top:1.25rem}
+  .concepts{list-style:none;margin:0;padding:0}
+  .concepts li{padding:.85rem 0;border-top:1px solid var(--rule)}
+  .concepts li:last-child{border-bottom:1px solid var(--rule)}
+  .cicon{width:1.5rem;height:1.5rem;color:var(--accent);vertical-align:-.4rem;margin-right:.6rem}
+  .concepts b{display:block;font-size:1.1rem;color:var(--accent)}
+  .concepts span{display:block;font-size:.95rem;color:var(--soft)}
+  @media (max-width:800px){.frame{grid-template-columns:1fr}}
+
+  /* ---------- 10 expectations ---------- */
+  ol.expect{list-style:none;margin:0;padding:0;max-width:56rem;counter-reset:e}
+  ol.expect li{counter-increment:e;display:grid;grid-template-columns:3.2rem 1fr;gap:1rem;padding:1.1rem 0;border-top:1px solid var(--rule);align-items:baseline}
+  ol.expect li:last-child{border-bottom:1px solid var(--rule)}
+  ol.expect li::before{content:counter(e);font-family:var(--serif);font-size:2.4rem;line-height:1;color:var(--accent)}
+
+  /* ---------- 11 positionality / 12 AI / 13 reflection ---------- */
+  .fill{border-left:4px solid var(--white);padding:.25rem 0 .25rem 1.25rem;margin-top:1.5rem;max-width:56ch}
+  .fill p{margin:0;font-family:var(--serif);font-style:italic;font-size:1.15rem;line-height:1.35}
+  .pair{display:grid;grid-template-columns:repeat(auto-fit,minmax(16rem,1fr));gap:2rem 3rem;max-width:60rem}
+  .pair h3{margin-bottom:.4em}
+  .mark{font-family:var(--serif);font-size:2rem;line-height:1;color:var(--accent);display:block;margin-bottom:.3rem}
+  .thanks{margin-top:2.5rem;font-family:var(--serif);font-size:clamp(1.4rem,2.4vw,2rem)}
+
+  /* ---------- 14 sources ---------- */
+  ol.refs{margin:0;padding:0 0 0 1.4rem;max-width:64rem;font-size:.98rem;line-height:1.45}
+  ol.refs li{margin-bottom:.7rem;padding-left:.3rem}
+  ol.refs em{font-style:italic}
+
+  /* ---------- chrome ---------- */
+  #progress{position:fixed;inset:0 0 auto 0;height:4px;background:var(--black);transform-origin:left;transform:scaleX(.07);transition:transform .35s ease;z-index:20}
+  .nav{
+    position:fixed;right:max(1rem,env(safe-area-inset-right));bottom:max(1rem,env(safe-area-inset-bottom));z-index:20;
+    display:flex;align-items:center;gap:.25rem;background:#fff;color:#000;border:2px solid #000;padding:.15rem .3rem .15rem .9rem;font-size:.9rem;
+  }
+  .nav button{font:inherit;color:inherit;background:transparent;border:0;width:2.5rem;height:2.5rem;cursor:pointer;font-size:1.1rem}
+  .nav button:hover{background:var(--red);color:#fff}
+  .nav #counter{min-width:3.6rem;font-variant-numeric:tabular-nums}
+  #timer{position:fixed;left:max(1rem,env(safe-area-inset-left));bottom:max(1rem,env(safe-area-inset-bottom));z-index:20;background:#fff;color:#000;border:2px solid #000;padding:.5rem .9rem;font-size:.9rem;font-variant-numeric:tabular-nums;display:none}
+  #timer.show{display:block}
+  #timer.over{background:var(--red);color:#fff;border-color:var(--red)}
+
+  @media (prefers-reduced-motion:reduce){
+    .js .ratio-div{transition:none;transform:none}
+    #progress{transition:none}
+  }
+  @media print{
+    .nav,#timer,#progress{display:none}
+    .slide{min-height:auto;page-break-after:always}
+  }
+</style>
+<script>document.documentElement.classList.add('js')</script>
+</head>
+<body>
+<div id="progress" aria-hidden="true"></div>
+
+<!-- 1 · Title -->
+<section class="slide on-white" id="s1" aria-label="Title">
+  <div class="inner">
+    <p class="tab">Presentation #1: research proposal, part 1</p>
+    <h1 class="display">What does being divorced mean for women in Kazakhstan?</h1>
+    <p class="lede">An interpretivist study of how divorced women understand their own marital status.</p>
+    <p class="byline"><strong>Moldir Toktar</strong><br>Fall 2026</p>
+  </div>
+  <svg class="title-mark" viewBox="0 0 120 120" aria-hidden="true">
+    <circle cx="46" cy="60" r="30" fill="none" stroke="#fff" stroke-width="6"/>
+    <path d="M74 34 A30 30 0 1 1 74 86" fill="none" stroke="#fff" stroke-width="6" stroke-dasharray="10 9" stroke-linecap="round"/>
+  </svg>
+</section>
+
+<!-- 2 · The puzzle -->
+<section class="slide on-tint" id="s2" aria-label="Context and puzzle">
+  <div class="inner">
+    <p class="tab">Where the question comes from</p>
+    <h2>About one divorce for every three marriages.</h2>
+    <div class="ratio" role="img" aria-label="Bar chart: 40.6 thousand divorces shown as about one third of 123.6 thousand marriages registered in Kazakhstan in 2024">
+      <div class="ratio-bar"><span class="ratio-div"></span></div>
+      <div class="ratio-key">
+        <span><i></i>123.6 thousand marriages registered in 2024</span>
+        <span><i class="r"></i>40.6 thousand divorces, same scale</span>
+      </div>
+    </div>
+    <p class="small">Source: Bureau of National Statistics, Republic of Kazakhstan, 2024 marriage and divorce indicators. The ratio is my arithmetic (40.6 ÷ 123.6 ≈ 0.33). It compares two counts from the same year. It is not the share of marriages that end.</p>
+    <p>The numbers count endings. They do not say what an ending means to the woman living it.</p>
+  </div>
+</section>
+
+<!-- 3 · Research question -->
+<section class="slide on-red" id="s3" aria-label="Research question">
+  <div class="inner">
+    <p class="tab">Research question</p>
+    <p class="rq">How do divorced women in Kazakhstan understand their marital status, given their culture’s family expectations?</p>
+    <dl class="scope">
+      <div><dt>Population</dt><dd>Women whose marriages have ended</dd></div>
+      <div><dt>Context</dt><dd>Kazakhstan, and the family expectations of Kazakh culture</dd></div>
+      <div><dt>Time</dt><dd>Fall 2026</dd></div>
+    </dl>
+    <p>It is an empirical question about meaning. It does not ask whether divorce is right or wrong.</p>
+  </div>
+</section>
+
+<!-- 4 · Epistemological positioning -->
+<section class="slide on-white" id="s4" aria-label="Epistemological positioning">
+  <div class="inner">
+    <p class="tab">Epistemological positioning</p>
+    <h2>Interpretivism</h2>
+    <p class="lede">Research that asks what something means to the people living it, not how often it happens.</p>
+    <ul class="rows">
+      <li><b>Why it fits.</b> My question asks how women <em>understand</em> their status. That is a question about meaning.</li>
+      <li><b>Why not a survey.</b> A fixed-answer questionnaire would decide in advance what “being divorced” means and which words count.</li>
+      <li><b>What I am not doing.</b> I am not measuring how many women feel shame or testing whether shame causes anything.</li>
+    </ul>
+  </div>
+</section>
+
+<!-- 5 · Contribution -->
+<section class="slide on-tint" id="s5" aria-label="Contribution">
+  <div class="inner">
+    <p class="tab">Contribution</p>
+    <h2>A small, situated picture</h2>
+    <ul class="rows">
+      <li><b>One group.</b> Divorced women in Kazakhstan, at one moment in time.</li>
+      <li><b>Their own terms.</b> In the sources I read, divorce appears as a statistic, or as a side of another story such as violence or motherhood. I ask women to say what their status means.</li>
+      <li><b>Culture and identity together.</b> I connect shame and family duty, which are well described, to how a woman sees herself once the marriage has ended.</li>
+    </ul>
+  </div>
+</section>
+
+<!-- 6 · Literature review -->
+<section class="slide on-white" id="s6" aria-label="Literature review">
+  <div class="inner">
+    <p class="tab">Literature review</p>
+    <h2>What others have found: three camps</h2>
+    <div class="cols">
+      <article>
+        <h3>Shame and duty shape how a woman is judged</h3>
+        <p><b>Akhmetova, Durrani &amp; Karabay (2025)</b> interviewed 12 professionals and 12 survivors of partner violence. Shame (<em>uyat</em>) shapes how survivors think and respond.</p>
+        <p><b>Thibault &amp; Caron (2022)</b>, an edited volume, shows <em>uyat</em> resting on patriarchal, hierarchical gender norms.</p>
+        <p><b>CohenMiller (2020)</b>, an autoethnography, notes families that see a woman as wife and mother first.</p>
+      </article>
+      <article>
+        <h3>Kin and the post-Soviet setting</h3>
+        <p><b>Ventsel (2019)</b> describes Kazakh families as wide networks built on reciprocity and duty to relatives, which acted as a “shock absorber” after the Soviet collapse.</p>
+        <p><b>Kandiyoti (2007)</b> examines the “Soviet paradox” in gender politics: a legacy that is neither simply colonised nor simply modern.</p>
+      </article>
+      <article>
+        <h3>Identity when a marriage ends</h3>
+        <p><b>Chao et al. (2025)</b> study role transitions and identity reconstruction among divorced older women. Many had put family stability before their own wellbeing, with identities built on being a wife and mother.</p>
+      </article>
+    </div>
+    <div class="gap">
+      <p><strong>The gap.</strong> In these sources, shame and family duty are documented, but I found none that asks divorced women in Kazakhstan how they themselves understand their marital status.</p>
+    </div>
+  </div>
+</section>
+
+<!-- 7 · Quote 1 -->
+<section class="slide on-red" id="s7" aria-label="Quotation on shame">
+  <div class="inner">
+    <p class="tab">Literature review: shame</p>
+    <blockquote class="pull" style="margin:0">
+      “A marital breakdown is often perceived as a woman’s personal failure, bringing dishonor not only to herself but also to her extended family.”
+    </blockquote>
+    <p class="cite">Childress et al. (2024), as cited in Akhmetova, Durrani &amp; Karabay (2025)</p>
+    <p class="reading"><b>My reading.</b> A divorce is judged as her failure, and the cost is shared by her family. That is <em>uyat</em> at work. It also raises my question: does she see it that way herself?</p>
+  </div>
+</section>
+
+<!-- 8 · Quote 2 -->
+<section class="slide on-tint" id="s8" aria-label="Quotation on the wife and mother role">
+  <div class="inner">
+    <p class="tab">Literature review: family expectations</p>
+    <blockquote class="pull long" style="margin:0">
+      “Despite the modern views and traditions that many families follow in Kazakhstan, there are families who see women as wife and mother first (especially her in-laws), thus expecting she performs well in this role regardless of her other roles.”
+    </blockquote>
+    <p class="cite">Saniyazova, CohenMiller &amp; Saniyazova (2020), as cited in CohenMiller (2020)</p>
+    <p class="reading"><b>My reading.</b> The wife-and-mother role is judged by others, especially in-laws. When the marriage ends, that judgement may follow the woman.</p>
+  </div>
+</section>
+
+<!-- 9 · Analytical framework -->
+<section class="slide on-white" id="s9" aria-label="Analytical framework">
+  <div class="inner">
+    <p class="tab">Analytical framework: sensitising concepts</p>
+    <div class="frame">
+      <div class="anchor">
+        <p>How do divorced women understand their marital status?</p>
+        <p class="small">These concepts tell me where to look. They do not tell me what I will find.</p>
+      </div>
+      <ul class="concepts">
+        <li><svg class="cicon" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 12c2.5-4 6-6 9-6s6.5 2 9 6c-2.5 4-6 6-9 6s-6.5-2-9-6Z" fill="none" stroke="currentColor" stroke-width="1.6"/><line x1="4" y1="19" x2="20" y2="5" stroke="currentColor" stroke-width="1.6"/></svg><b>Uyat (shame)</b><span>Shame that governs what is proper, and lands on the family as well as the woman. Thibault &amp; Caron (2022); Akhmetova et al. (2025)</span></li>
+        <li><svg class="cicon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="8" cy="9" r="4" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="17" cy="9" r="4" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M3 20c1-3.5 3.5-5 5-5s4 1.5 5 5M11 20c1-3.5 3.5-5 5-5s4 1.5 5 5" fill="none" stroke="currentColor" stroke-width="1.6"/></svg><b>Kinship obligation</b><span>Family as a wide network of reciprocity and duty to relatives. Ventsel (2019)</span></li>
+        <li><svg class="cicon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="7" r="4" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M4 21c0-4.4 3.6-8 8-8s8 3.6 8 8" fill="none" stroke="currentColor" stroke-width="1.6"/></svg><b>The wife-and-mother role</b><span>The expectation, often from in-laws, that she performs this role above her other roles. CohenMiller (2020)</span></li>
+        <li><svg class="cicon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v18M7 7l-4 4 4 4M17 7l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg><b>Gender order after the Soviet period</b><span>How the Soviet legacy shapes what counts as “modern” and “traditional” for women. Kandiyoti (2007)</span></li>
+        <li><svg class="cicon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4c-4.4 0-8 3.6-8 8s3.6 8 8 8 8-3.6 8-8" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><path d="M12 12l7-7" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><circle cx="19" cy="5" r="1.6" fill="currentColor"/></svg><b>Identity after a marriage ends</b><span>How women rebuild who they are when wife and mother are no longer the whole story. Chao et al. (2025)</span></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- 10 · Expectations -->
+<section class="slide on-tint" id="s10" aria-label="Expectations">
+  <div class="inner">
+    <p class="tab">Analytical framework: my expectations</p>
+    <h2>What I expect, and could be wrong about</h2>
+    <ol class="expect">
+      <li><span>Women choose to live within this system and try to balance social pressure with personal independence.</span></li>
+      <li><span>The extended family and kin network will act as both a source of support and a channel of judgment.</span></li>
+      <li><span>Women will describe rebuilding their identity beyond the roles of wife and mother once the marriage ends.</span></li>
+    </ol>
+    <p style="margin-top:1.5rem">Interpretivist does not mean having no expectations. It means saying them out loud and being ready to hear something else.</p>
+  </div>
+</section>
+
+<!-- 11 · Positionality -->
+<section class="slide on-red" id="s11" aria-label="Positionality">
+  <div class="inner">
+    <p class="tab">Analytical framework: positionality</p>
+    <h2>My standpoint shapes what I hear</h2>
+    <ul class="rows">
+      <li>My three expectations came before any fieldwork. They are assumptions, not findings.</li>
+      <li>The risk is that I hear my own expectations confirmed. So I keep the design open, and the question can shift once I listen.</li>
+      <li>Most of what I read is academic writing in English. Women may use other words, in Kazakh or Russian, for what I call “marital status”.</li>
+    </ul>
+    <div class="fill">
+      <p>Growing up in Kazakhstan, I found myself observing these patterns around me and grew curious about their causes. That vantage point drew me to this question, and it is also why I stay alert to reading my own expectations into what women tell me.</p>
+    </div>
+  </div>
+</section>
+
+<!-- 12 · AI transparency -->
+<section class="slide on-white" id="s12" aria-label="AI transparency statement">
+  <div class="inner">
+    <p class="tab">AI transparency</p>
+    <h2>How I worked with AI</h2>
+    <ul class="rows">
+      <li><b>Mine.</b> The research question, the epistemological choice, my three expectations, and the two central quotations — I supplied both, with their sources, before any search began.</li>
+      <li><b>AI helped with.</b> It searched for and located the rest of the literature review, and coded and designed this page. Where its first search results or phrasing were off, I corrected them and had it rework the page across several rounds — the colour scheme, the wording, and what each slide argues.</li>
+      <li><b>My responsibility.</b> I checked every source myself and can explain any concept or citation on this page.</li>
+    </ul>
+  </div>
+</section>
+
+<!-- 13 · Ungraded reflection -->
+<section class="slide on-tint" id="s13" aria-label="Ungraded reflection">
+  <div class="inner">
+    <h2>What working with AI helped me understand, and what I still don’t</h2>
+    <div class="pair">
+      <div>
+        <span class="mark" aria-hidden="true">✓</span>
+        <h3>Understand now</h3>
+        <p>Going through sources with AI, I noticed how often divorce shows up only as a side detail in studies about violence or motherhood, never as the main question. That gap is what convinced me my own question is worth asking.</p>
+      </div>
+      <div>
+        <span class="mark" aria-hidden="true">?</span>
+        <h3>Still unsure</h3>
+        <p>How to ask about shame without leading women toward it, and whether “divorced” is even the word they use for themselves.</p>
+      </div>
+    </div>
+    <p class="thanks">Thank you. Questions welcome.</p>
+  </div>
+</section>
+
+<!-- 14 · Sources -->
+<section class="slide on-white" id="s14" aria-label="Sources">
+  <div class="inner">
+    <p class="tab">Sources</p>
+    <ol class="refs">
+      <li>Akhmetova, S., Durrani, N., &amp; Karabay, A. (2025). Intimate partner violence and the culture of shame in Kazakhstan: Voices of survivors and violence against women professionals. <em>Violence Against Women</em>. https://doi.org/10.1177/10778012251384563</li>
+      <li>Bureau of National Statistics of the Republic of Kazakhstan. (2024 data). <em>Marriage and divorce indicators, 2024</em>. https://stat.gov.kz/news/2024-zhyly-nekelesu-men-azhyrasu-k-rsetkishi/</li>
+      <li>Chao, S.-F., Wang, Y.-T., Hou, C.-C., &amp; Lin, J.-P. (2025). Beyond marital dissolution: Role transitions and identity reconstruction of divorced older women. <em>Innovation in Aging, 9</em>(Suppl. 2), igaf122.2493. https://doi.org/10.1093/geroni/igaf122.2493</li>
+      <li>Childress, S., Shrestha, N., Kenensarieva, K., Urbaeva, J., &amp; Schrag, R. V. (2024). The role of culture in the justification and perpetuation of domestic violence: The perspectives of service providers in Kyrgyzstan. Cited in Akhmetova et al. (2025).</li>
+      <li>CohenMiller, A. S. (2020). Performing, passing, and covering motherhood in academic spaces: A heartful autoethnography. <em>LEARNing Landscapes, 13</em>(1), 97–114. https://files.eric.ed.gov/fulltext/EJ1261392.pdf</li>
+      <li>Kandiyoti, D. (2007). The politics of gender and the Soviet paradox: Neither colonized, nor modern? <em>Central Asian Survey, 26</em>(4). https://doi.org/10.1080/02634930802018521</li>
+      <li>Saniyazova, A., CohenMiller, A. S., &amp; Saniyazova, Z. (2020, April). <em>Managing multiple roles: Experiences of graduate student mothers in Kazakhstan</em> [Conference presentation]. Comparative and International Education Society. Cited in CohenMiller (2020).</li>
+      <li>Thibault, H., &amp; Caron, J.-F. (Eds.). (2022). <em>Uyat and the culture of shame in Central Asia</em>. Palgrave Macmillan. https://doi.org/10.1007/978-981-19-4328-7</li>
+      <li>Ventsel, A. (2019). Half of the country are my relatives: Kinship solidarity, morality and good life in post-socialist Kazakhstan. <em>Folklore: Structure, Typology, Semiotics, 2</em>(3), 70–86. https://doi.org/10.28995/2658-5294-2019-3-70-86</li>
+    </ol>
+  </div>
+</section>
+
+<div id="timer" aria-live="off">0:00 (target 8 to 10 min)</div>
+<div class="nav" role="group" aria-label="Slide navigation">
+  <button id="prev" type="button" aria-label="Previous slide">←</button>
+  <span id="counter" aria-live="polite">1 / 14</span>
+  <button id="next" type="button" aria-label="Next slide">→</button>
+</div>
+
+<script>
+(function(){
+  var slides=[].slice.call(document.querySelectorAll('.slide'));
+  var counter=document.getElementById('counter');
+  var bar=document.getElementById('progress');
+  var reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var idx=0,ticking=false;
+
+  function setIdx(i){
+    idx=i;
+    counter.textContent=(i+1)+' / '+slides.length;
+    bar.style.transform='scaleX('+((i+1)/slides.length)+')';
+  }
+  function update(){
+    var mid=window.innerHeight*0.5,found=idx;
+    slides.forEach(function(s,i){
+      var r=s.getBoundingClientRect();
+      if(r.top<window.innerHeight*0.7){s.classList.add('in')}
+      if(r.top<=mid&&r.bottom>mid){found=i}
+    });
+    setIdx(found);
+    ticking=false;
+  }
+  window.addEventListener('scroll',function(){
+    if(!ticking){ticking=true;requestAnimationFrame(update)}
+  },{passive:true});
+  window.addEventListener('resize',update);
+
+  function go(dir){
+    var r=slides[idx].getBoundingClientRect();
+    var behavior=reduce?'auto':'smooth';
+    if(dir>0&&r.bottom>window.innerHeight+60){
+      window.scrollBy({top:window.innerHeight*0.8,behavior:behavior});return;
+    }
+    if(dir<0&&r.top<-60){
+      window.scrollBy({top:-window.innerHeight*0.8,behavior:behavior});return;
+    }
+    var n=Math.max(0,Math.min(slides.length-1,idx+dir));
+    slides[n].scrollIntoView({behavior:behavior,block:'start'});
+  }
+  document.getElementById('next').addEventListener('click',function(){go(1)});
+  document.getElementById('prev').addEventListener('click',function(){go(-1)});
+
+  /* timer: press T to show and start, R to reset */
+  var timerEl=document.getElementById('timer'),t0=null,tick=null;
+  function fmt(ms){var s=Math.floor(ms/1000),m=Math.floor(s/60);s=s%60;return m+':'+(s<10?'0':'')+s}
+  function draw(){
+    var ms=Date.now()-t0;
+    timerEl.textContent=fmt(ms)+' (target 8 to 10 min)';
+    timerEl.classList.toggle('over',ms>10*60*1000);
+  }
+  function toggleTimer(){
+    if(timerEl.classList.contains('show')){timerEl.classList.remove('show');return}
+    timerEl.classList.add('show');
+    if(t0===null){t0=Date.now();tick=setInterval(draw,1000);draw()}
+  }
+  function resetTimer(){t0=Date.now();draw()}
+
+  document.addEventListener('keydown',function(e){
+    if(e.ctrlKey||e.metaKey||e.altKey)return;
+    var k=e.key;
+    if(k==='ArrowRight'||k==='ArrowDown'||k==='PageDown'||(k===' '&&!e.shiftKey)){e.preventDefault();go(1)}
+    else if(k==='ArrowLeft'||k==='ArrowUp'||k==='PageUp'||(k===' '&&e.shiftKey)){e.preventDefault();go(-1)}
+    else if(k==='Home'){e.preventDefault();slides[0].scrollIntoView({behavior:reduce?'auto':'smooth'})}
+    else if(k==='End'){e.preventDefault();slides[slides.length-1].scrollIntoView({behavior:reduce?'auto':'smooth'})}
+    else if(k==='t'||k==='T'){toggleTimer()}
+    else if(k==='r'||k==='R'){if(t0!==null)resetTimer()}
+  });
+
+  update();
+})();
+</script>
+</body>
+</html>
